@@ -83,7 +83,7 @@
 
   Dit is vooral handig als je E.g.
   - moet zoeken naar wat voor parameter een bepaalde methode moet hebben
-  - Of zoekt naar een name van een variable
+  - Of zoekt naar een naam van een variable
   Om dan weer trg te keren naar waar je was.
 
 
@@ -141,9 +141,6 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 * syntastic       (Code checking)
   * rubocop         (Code style)
   * reek            (Code smells)
-
-
-
 
 
 

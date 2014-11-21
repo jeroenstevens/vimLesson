@@ -37,3 +37,9 @@ set number
 imap jk <Esc>mm:w<Enter>`m
 cmap W w !sudo tee %
 imap jj <Esc>
+
+"Cursor Navigation
+noremap H ^
+noremap L $
+noremap <c-j> 10j
+noremap <c-k> 10k
