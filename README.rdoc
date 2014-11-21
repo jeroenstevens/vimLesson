@@ -96,22 +96,16 @@
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 #### Ga in je folder voor de plugins
   $ cd ~/.vim/bundle/
-#### ag (Search)
-  Verbeterde versie van Ack
-  $ git clone https://github.com/rking/ag.vim ag && vim +Helptags
-#### mru (File history)
-  Most Recent Used, zicht op laast gebruikte bestanden
-  $ git clone http://github.com/yegappan/mru
 #### rails
   $ git clone git://github.com/tpope/vim-rails.git
 #### rubytest (TestUnit)
-  Voer testen uit vanuit the spec bestanden of methoden
+  Voer testen uit vanuit de test bestanden of methoden
   $ git clone git@github.com:janx/vim-rubytest.git
+#### mru (File history)
+  Most Recent Used, zicht op laast gebruikte bestanden
+  $ git clone http://github.com/yegappan/mru
 
 ### Commands
-#### ag
-  :AgFile!        (Zoek naar bestands naam)
-  :Ag!            (Zoek naar bestanden)
 
 #### rails
   :Rserver        (To start a background server)
@@ -137,12 +131,13 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
   <Leader>l       (Voer de laatste test uit)
 
 ## Andere plugins
-* nerdtree        (Voor een file tree van de huidige dir)
-* nerdcommenter   (Commenting)
-* easymotion      (Snellere/Meer accutraat navigeren in een bestand)
 * gitgutter       (Git +/- in de zijlijn voor veranderingen)
 * auto-pairs      (Automatisch aansluiten van ({" etc. )
 * surround        ( ({" Verwijderen/Omwisselen/Toevoegen )
+* nerdtree        (Voor een file tree van de huidige dir)
+* nerdcommenter   (Commenting)
+* easymotion      (Snellere/Meer accutraat navigeren in een bestand)
+* ag              (Verbeterde versie van Ack)
 * syntastic       (Code checking)
   * rubocop         (Code style)
   * reek            (Code smells)
