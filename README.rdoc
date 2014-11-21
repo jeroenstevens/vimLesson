@@ -1,0 +1,154 @@
+== README
+
+## Vim
+### Samenvatting vim tutor
+* Verschillende modes
+  * Normal (Toetsen combinaties)          ESC ( Om weer trg naar te keren vanuit andere modes. )
+  * Insert (Typen van tekst)              i a o (i = op de cursor, a = na de cursor, o = onder de cursor)
+  * Execute (Uitvoeren van commands)      :
+  * Visual Line                           shift-v
+  * Visual Block                          ctrl-v
+
+* Navigeren
+  * Omlaag                                j
+  * Omhoog                                k
+  * Links                                 h
+  * Rechts                                l
+
+  * Navigeren op 1 regel
+    * Naar begin van de regel             ^
+    * Naar eind van de regel              $
+    * Volgend woord:                      w
+    * Vorig woord:                        b
+
+  * Navigeren in het bestand
+    * Bovenaan                            gg
+    * Onderaan                            G
+
+* File managment
+  * Opslaan                               :w
+  * Afsluiten                             :q
+  * Bestand bewerken                      :e
+
+* New lines
+  * Open nieuwe regel onder huidige       o
+  * Open nieuwe regel boven huidige       O
+
+* Yanking(kopieren) & Put(Plakken)
+  * Selectie kopieren:                    Vy
+  * Selectie na de cursor plakken:        p
+  * Selectie voor de cursor plakken:      P
+  * Kopieer woord:                        yiw (yank in word)
+
+* Tekst toevoegen aan het eind
+  * Na de cursor                          a
+  * Aan het eind van de regel             A
+
+* Tekst verwijderen
+  * Verwijder regel                       dd
+  * Verwijder woord                       daw (delete around word)
+  * Verwijder tot eind van de regel       d$
+
+* Tekst veranderen (Verschil met verwijderen is dat dit je in Insert mode brengt)
+  * Verandere regel                       cc
+  * Verander woord                        ciw (change in word)
+  * Verander in ""                        ci" (change in ")
+  * Verander met ""                       ca" (change around ")
+
+* Undo/redo
+  * Undo                                  u
+  * Redo                                  ctrl+r
+
+* Zoeken
+  * Vooruit zoeken                        /
+  * Achteruit zoeken                      ?
+  * Volgende overeenkomst                 n
+  * Vorige overeenkomst                   N
+
+* Vervangen
+  * In regel                              :s/old/new/g
+  * In bestand                            :%s/old/new/g
+  * In selectie                           shift+v :'<,'>s/old/new/g
+
+* Terminal command uitvoeren              :! command
+####//---------------------------------------------
+
+### Meer vim
+#### Marks
+  - ESC zodat je in normal mode zite
+  - Typ mm (om een map aan te maken op de huidige plek van de cursor)
+  - Typ jjj (Iets om afstand te creeëren van de map)
+  - Type `m (Backtick en de letter waar je de map op hebt gebonden)
+  - Dit brengt je cursor terug naar de plek waar je de map aanmaakte
+
+  Dit is vooral handig als je E.g.
+  - moet zoeken naar wat voor parameter een bepaalde methode moet hebben
+  - Of zoekt naar een name van een variable
+  Om dan weer trg te keren naar waar je was.
+
+
+#### .
+
+## Plugins
+### Installatie
+#### pathogen (Plugin manager)
+  $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+#### Ga in je folder voor de plugins
+  $ cd ~/.vim/bundle/
+#### ag (Search)
+  Verbeterde versie van Ack
+  $ git clone https://github.com/rking/ag.vim ag && vim +Helptags
+#### mru (File history)
+  Most Recent Used, zicht op laast gebruikte bestanden
+  $ git clone http://github.com/yegappan/mru
+#### rails
+  $ git clone git://github.com/tpope/vim-rails.git
+#### rubytest (TestUnit)
+  Voer testen uit vanuit the spec bestanden of methoden
+  $ git clone git@github.com:janx/vim-rubytest.git
+
+### Commands
+#### ag
+  :AgFile!        (Zoek naar bestands naam)
+  :Ag!            (Zoek naar bestanden)
+
+#### rails
+  :Rserver        (To start a background server)
+  :Rpreview       (To open the browser in path, e.g. :Rpreview / for localhost:3000/)
+  :Rlog           (To show the log in a split screen)
+
+  :EModel         (Ga naar de model die bij de huidige file hoort of geef argument)
+  :EController    (Ga naar de controller die bij de huidige file hoort of geef argument)
+  :EView          (Ga naar de view die bij de huidige file hoort of geef argument)
+
+  :Rake db:migrate
+
+  :Rgenerate
+
+  :RExtract       (e.g. :2,5RExtract partial_name OR :'<,'>RExtract controller_name/partial_name)
+
+#### mru
+  :MRU            (Open een scherm met de meest recente gebruikte bestanden)
+
+#### rubytest
+  <Leader>t       (Voer de test methode uit waar de cursor in staat)
+  <Leader>T       (Voer alle test in de huidige file uit)
+  <Leader>l       (Voer de laatste test uit)
+
+## Andere plugins
+* nerdtree        (Voor een file tree van de huidige dir)
+* nerdcommenter   (Commenting)
+* easymotion      (Snellere/Meer accutraat navigeren in een bestand)
+* gitgutter       (Git +/- in de zijlijn voor veranderingen)
+* auto-pairs      (Automatisch aansluiten van ({" etc. )
+* surround        ( ({" Verwijderen/Omwisselen/Toevoegen )
+* syntastic       (Code checking)
+  * rubocop         (Code style)
+  * reek            (Code smells)
+
+
+
+
+
+
